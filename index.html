@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aprenda a escrever prompts, revisar respostas e proteger informações ao usar inteligência artificial no trabalho administrativo.">
+  <title>IA no Trabalho | APEX V</title>
+  <link rel="stylesheet" href="./estilos.css">
+  <script src="./portal.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio"><span class="brand-icon" aria-hidden="true">✦</span> IA no Trabalho</a>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" hidden>Menu</button>
+      <nav id="menu" aria-label="Navegação principal">
+        <a href="#inicio">Início</a><a href="#ia-no-trabalho">IA no trabalho</a><a href="#prompts">Prompts</a><a href="#riscos">Riscos</a><a href="#boas-praticas">Boas práticas</a><a href="#quiz">Quiz</a><a href="#sobre">Sobre</a>
+      </nav>
+    </div>
+  </header>
+  <main id="conteudo" tabindex="-1">
+    <section class="hero" id="inicio" aria-labelledby="titulo">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow"><span aria-hidden="true"></span> Extensão universitária · APEX V</p>
+          <h1 id="titulo">Inteligência Artificial no Ambiente Profissional</h1>
+          <p class="hero-sub">Uso consciente, eficiente e crítico.</p>
+          <p class="hero-description">Aprenda a pedir melhores respostas à IA, conferir o que ela entrega e proteger informações na rotina administrativa.</p>
+          <a class="button button-light" href="#ia-no-trabalho">Começar a aprender</a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-outer"></div><div class="orbit orbit-inner"></div>
+          <span class="art-spark art-spark-top">✦</span><span class="art-spark art-spark-bottom">✦</span>
+          <div class="art-window">
+            <div class="art-bar"><i></i><i></i><i></i></div>
+            <div class="art-body"><span class="art-icon">✦</span><div class="art-lines"><i></i><i></i><i></i></div></div>
+            <div class="art-input"><span></span><b>↑</b></div>
+          </div>
+          <div class="art-check">✓</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ia-no-trabalho" aria-labelledby="titulo-ia">
+      <div class="wrap">
+        <header class="section-heading">
+          <p class="eyebrow">Aplicações no dia a dia</p>
+          <h2 id="titulo-ia">Inteligência artificial no trabalho</h2>
+          <p>IA generativa é uma tecnologia que cria conteúdo, como textos e sugestões de fórmulas, a partir de instruções. No trabalho administrativo, ela pode ajudar a preparar rascunhos e organizar informações para revisão.</p>
+        </header>
+        <ul class="task-grid">
+          <li><span class="tile-icon" aria-hidden="true">✉</span><h3>E-mails</h3><p>Redija um convite para uma reunião e revise o tom antes de enviar.</p></li>
+          <li><span class="tile-icon" aria-hidden="true">▤</span><h3>Documentos</h3><p>Proponha categorias e padrões de nomes para organizar arquivos.</p></li>
+          <li><span class="tile-icon" aria-hidden="true">▦</span><h3>Planilhas</h3><p>Peça uma fórmula e teste o cálculo em uma amostra com resultado conhecido.</p></li>
+          <li><span class="tile-icon" aria-hidden="true">◷</span><h3>Cronogramas</h3><p>Distribua etapas de uma atividade e confira os prazos com a equipe.</p></li>
+          <li><span class="tile-icon" aria-hidden="true">≡</span><h3>Resumos</h3><p>Organize decisões e pendências de um texto autorizado em tópicos.</p></li>
+        </ul>
+        <p class="notice"><strong>A decisão final é humana.</strong> Compare a resposta com os documentos de origem e valide o conteúdo antes de usar, enviar ou publicar.</p>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="prompts" aria-labelledby="titulo-prompts">
+      <div class="wrap">
+        <header class="section-heading">
+          <p class="eyebrow">Escrita de instruções</p>
+          <h2 id="titulo-prompts">Como elaborar bons prompts</h2>
+          <p>Um prompt é a instrução que você dá à IA. Explique a situação, diga o que quer alcançar, indique o formato da resposta e forneça apenas as informações relevantes e autorizadas.</p>
+        </header>
+        <div class="prompt-parts">
+          <div><strong>Contexto</strong><span>Qual é a situação e para quem é a resposta?</span></div>
+          <div><strong>Objetivo</strong><span>O que a IA deve fazer?</span></div>
+          <div><strong>Formato</strong><span>Como a resposta deve ser organizada?</span></div>
+          <div><strong>Dados e limites</strong><span>O que pode usar e o que deve evitar?</span></div>
+        </div>
+        <div class="prompt-grid">
+          <div>
+            <h3>Compare os exemplos</h3>
+            <p class="muted">Todos os casos abaixo são fictícios.</p>
+            <div class="examples">
+              <details open><summary>Financeiro · E-mail de lembrete</summary><div class="comparison">
+                <p><strong>Prompt vago</strong>Escreva um e-mail de cobrança.</p>
+                <p><strong>Prompt aprimorado</strong>Redija um lembrete cordial para um fornecedor fictício enviar uma nota fiscal até sexta-feira. Inclua assunto e até dois parágrafos. Não invente valores ou números de pedido.</p>
+              </div></details>
+              <details><summary>Recursos Humanos · Planilha de treinamento</summary><div class="comparison">
+                <p><strong>Prompt vago</strong>Analise a planilha de treinamento.</p>
+                <p><strong>Prompt aprimorado</strong>Na planilha fictícia, B2:B21 registra “Concluído” ou “Pendente”. Sugira uma fórmula no Excel em português para contar “Pendente” e mostre como conferir o resultado manualmente.</p>
+              </div></details>
+              <details><summary>Meio Ambiente e Planejamento · Cronograma</summary><div class="comparison">
+                <p><strong>Prompt vago</strong>Monte um cronograma.</p>
+                <p><strong>Prompt aprimorado</strong>Organize em uma tabela as etapas de uma campanha fictícia de reciclagem em duas semanas. Inclua coleta de materiais, divulgação e revisão final. Use as colunas Semana, Tarefa e Dependência. Sinalize informações que ainda precisam ser definidas.</p>
+              </div></details>
+            </div>
+          </div>
+          <div class="template">
+            <div class="template-head"><h3>Modelo reutilizável</h3><button class="button copy-button" id="copiar" type="button" hidden>Copiar modelo</button></div>
+            <pre id="modelo" tabindex="0">Contexto: [situação e público]
+Objetivo: [tarefa a realizar]
+Formato: [e-mail, tabela ou lista]
+Informações autorizadas: [dados necessários]
+Limites: [tom, tamanho e restrições]
+Se faltarem dados, indique o que precisa ser confirmado.</pre>
+            <p id="copia-status" role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="riscos" aria-labelledby="titulo-riscos">
+      <div class="wrap">
+        <header class="section-heading">
+          <p class="eyebrow">Uso crítico</p>
+          <h2 id="titulo-riscos">Limitações e riscos</h2>
+          <p>Uma resposta bem escrita ainda pode conter erros. Confira cada ponto que possa afetar o trabalho.</p>
+        </header>
+        <ul class="risk-grid">
+          <li><h3>Respostas inventadas</h3><p>Dados, citações e fontes podem parecer plausíveis. Abra a fonte original e confira se ela sustenta a resposta.</p></li>
+          <li><h3>Informações desatualizadas</h3><p>Confirme datas, orientações e versões na fonte oficial aplicável à tarefa.</p></li>
+          <li><h3>Instruções mal interpretadas</h3><p>Compare o que foi entregue com o objetivo e os limites do pedido. Esclareça termos ambíguos.</p></li>
+          <li><h3>Erros em documentos e planilhas</h3><p>Revise termos, datas, fórmulas, intervalos e totais. Teste os cálculos com exemplos conhecidos.</p></li>
+          <li><h3>Exposição de informações</h3><p>Dados confidenciais podem ser compartilhados ao colar texto ou enviar anexos. Use exemplos fictícios para testar.</p></li>
+          <li><h3>Confiança excessiva</h3><p>Mantenha as etapas de conferência e aprovação mesmo quando a resposta soar convincente.</p></li>
+        </ul>
+        <p class="notice notice-risk"><strong>Proteja as informações.</strong> Antes de inserir dados corporativos sensíveis, dados pessoais ou material sigiloso, confirme a autorização e as políticas internas. Mantenha senhas e credenciais fora dos prompts.</p>
+      </div>
+    </section>
+
+    <section class="section section-tint" id="boas-praticas" aria-labelledby="titulo-praticas">
+      <div class="wrap split">
+        <header class="section-heading">
+          <p class="eyebrow">Revisão na prática</p>
+          <h2 id="titulo-praticas">Checklist de boas práticas</h2>
+          <p>Marque os itens à medida que conclui cada etapa. Use a lista do primeiro pedido à aprovação do resultado.</p>
+        </header>
+        <div class="check-panel">
+          <div class="progress-pair"><label for="andamento">Etapas concluídas</label><span id="check-status" role="status">0 de 7</span></div>
+          <progress id="andamento" value="0" max="7"></progress>
+          <ul id="checklist">
+            <li><label><input type="checkbox">Defini claramente o objetivo.</label></li>
+            <li><label><input type="checkbox">Contextualizei a solicitação.</label></li>
+            <li><label><input type="checkbox">Revisei todo o conteúdo.</label></li>
+            <li><label><input type="checkbox">Conferi números e informações.</label></li>
+            <li><label><input type="checkbox">Validei as fontes.</label></li>
+            <li><label><input type="checkbox">Protegi as informações confidenciais.</label></li>
+            <li><label><input type="checkbox">Assumo a responsabilidade pelo resultado final.</label></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section quiz-section" id="quiz" aria-labelledby="titulo-quiz">
+      <div class="wrap quiz-wrap">
+        <header class="section-heading">
+          <p class="eyebrow">Quiz</p>
+          <h2 id="titulo-quiz">Teste seus conhecimentos</h2>
+          <p>Responda às cinco perguntas e confira a explicação de cada uma. As respostas ficam no seu navegador durante o teste.</p>
+        </header>
+        <noscript><p class="notice">Ative o JavaScript para responder ao quiz e acompanhar o progresso do checklist.</p></noscript>
+        <form id="quiz-form" autocomplete="off" hidden>
+          <div id="quiz-questions"></div>
+          <div class="quiz-actions">
+            <button type="submit" id="corrigir" class="button button-primary">Ver resultado</button>
+            <button type="reset" id="refazer" class="button button-outline" hidden>Refazer teste</button>
+          </div>
+          <section id="quiz-result" class="result" tabindex="-1" aria-labelledby="quiz-score" hidden>
+            <h3 id="quiz-score"></h3>
+            <ol id="quiz-review"></ol>
+          </section>
+        </form>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre" aria-labelledby="titulo-sobre">
+      <div class="wrap split">
+        <div>
+          <header class="section-heading"><p class="eyebrow">Extensão e cidadania</p><h2 id="titulo-sobre">Sobre o projeto</h2></header>
+          <p>Ação de extensão universitária da Unyleya, desenvolvida no curso de Redes de Computadores para a disciplina Ambiente Profissional e de Extensão V (APEX V). Integra o programa Educando para a Cidadania e se alinha ao ODS 4 – Educação de Qualidade.</p>
+          <p>O material é destinado a profissionais administrativos do Estaleiro Mauá, em Niterói (RJ), com foco em Financeiro, Recursos Humanos, Meio Ambiente e Planejamento.</p>
+          <p>Em um levantamento inicial com quatro colaboradoras, todas relataram usar IA e já ter recebido respostas diferentes do esperado. As dificuldades para escrever prompts e a necessidade de corrigir ou refazer tarefas orientaram a escolha dos exemplos e exercícios.</p>
+        </div>
+        <aside class="references" aria-labelledby="titulo-leituras">
+          <h3 id="titulo-leituras">Leituras complementares</h3>
+          <ul>
+            <li><a href="https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research">UNESCO · Guia sobre IA generativa na educação e na pesquisa <span>(em inglês)</span></a></li>
+            <li><a href="https://brasil.un.org/pt-br/sdgs/4">Nações Unidas Brasil · ODS 4 – Educação de Qualidade</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><p>IA no Trabalho · Material acadêmico independente · APEX V</p><a href="#inicio">Voltar ao início</a></div></footer>
+</body>
+</html>
