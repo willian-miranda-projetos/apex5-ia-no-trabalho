@@ -21,6 +21,8 @@ Abra [localhost:8000](http://localhost:8000). O botão de cópia usa a área de 
 
 Mantenha os exemplos fictícios. O quiz e o checklist funcionam no navegador e não enviam respostas.
 
+Ao publicar mudanças em `estilos.css` ou `portal.js`, atualize também o número `v` no endereço do arquivo correspondente em `index.html`. Isso evita que o navegador reutilize uma versão antiga em cache.
+
 ## Ativar a avaliação
 
 1. Crie um formulário voluntário no Google Forms ou no Microsoft Forms. Permita respostas sem login, desative a coleta de e-mails e dispense nome, empresa, cargo, matrícula ou qualquer outro identificador. Na pergunta aberta, peça que não sejam incluídos dados pessoais ou confidenciais.
