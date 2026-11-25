@@ -1,3 +1,31 @@
+const linksOpcionais = {
+  avaliacao: '',
+  apresentacao: ''
+};
+
+function configurarLink(link, valor, aceitarArquivoLocal = false) {
+  const endereco = valor.trim();
+  const arquivoLocal = aceitarArquivoLocal && endereco.startsWith('./');
+
+  try {
+    const url = arquivoLocal ? new URL(endereco, document.baseURI) : new URL(endereco);
+    if (!arquivoLocal && (!endereco.startsWith('https://') || url.protocol !== 'https:')) return false;
+    if (url.username || url.password) return false;
+    link.href = url.href;
+    link.hidden = false;
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+document.querySelector('#avaliacao-pendente').hidden = configurarLink(
+  document.querySelector('#link-avaliacao'), linksOpcionais.avaliacao
+);
+document.querySelector('#material-complementar').hidden = !configurarLink(
+  document.querySelector('#link-apresentacao'), linksOpcionais.apresentacao, true
+);
+
 const menuToggle = document.querySelector('#menu-toggle');
 const menu = document.querySelector('#menu');
 const compactMenu = window.matchMedia('(max-width: 55rem)');
@@ -46,6 +74,10 @@ copyButton.addEventListener('click', async () => {
   } catch {
     promptModel.focus();
     const selection = window.getSelection();
+    if (!selection) {
+      copyStatus.textContent = 'Não foi possível copiar. Selecione o modelo e copie o texto manualmente.';
+      return;
+    }
     const range = document.createRange();
     range.selectNodeContents(promptModel);
     selection.removeAllRanges();
@@ -56,7 +88,7 @@ copyButton.addEventListener('click', async () => {
       copyButton.focus();
       copyStatus.textContent = 'Modelo copiado.';
     } catch {
-      copyStatus.textContent = 'Texto selecionado. Use o comando Copiar do seu dispositivo.';
+      copyStatus.textContent = 'Não foi possível copiar automaticamente. O texto está selecionado. Use o comando Copiar do seu dispositivo.';
     }
   }
 });
@@ -131,6 +163,7 @@ const quiz = document.querySelector('#quiz-form');
 const questionList = document.querySelector('#quiz-questions');
 const submitButton = document.querySelector('#corrigir');
 const resetButton = document.querySelector('#refazer');
+const quizNotice = document.querySelector('#quiz-aviso');
 const result = document.querySelector('#quiz-result');
 const score = document.querySelector('#quiz-score');
 const review = document.querySelector('#quiz-review');
@@ -159,6 +192,15 @@ const fields = questions.map((question, questionIndex) => {
 });
 
 quiz.hidden = false;
+quiz.addEventListener('invalid', () => {
+  quizNotice.textContent = 'Responda a todas as perguntas para ver o resultado.';
+}, true);
+quiz.addEventListener('change', () => {
+  if (quiz.querySelectorAll('input:checked').length === questions.length) {
+    quizNotice.textContent = '';
+  }
+});
+
 quiz.addEventListener('submit', (event) => {
   event.preventDefault();
   const answers = new FormData(quiz);
@@ -194,6 +236,7 @@ quiz.addEventListener('reset', () => {
   submitButton.hidden = false;
   resetButton.hidden = true;
   result.hidden = true;
+  quizNotice.textContent = '';
   review.replaceChildren();
   fields[0].querySelector('input').focus();
 });

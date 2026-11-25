@@ -42,12 +42,23 @@
       </div>
     </section>
 
+    <aside class="portal-guide" aria-labelledby="titulo-guia">
+      <div class="wrap guide-inner">
+        <h2 id="titulo-guia">Como utilizar este portal?</h2>
+        <ol>
+          <li>Explore as seções para conhecer aplicações, limitações e boas práticas de IA.</li>
+          <li>Observe os exemplos de prompts e use o checklist para revisar suas atividades.</li>
+          <li>Ao finalizar, responda ao quiz para testar seus conhecimentos.</li>
+        </ol>
+      </div>
+    </aside>
+
     <section class="section" id="ia-no-trabalho" aria-labelledby="titulo-ia">
       <div class="wrap">
         <header class="section-heading">
           <p class="eyebrow">Aplicações no dia a dia</p>
           <h2 id="titulo-ia">Inteligência artificial no trabalho</h2>
-          <p>IA generativa é uma tecnologia que cria conteúdo, como textos e sugestões de fórmulas, a partir de instruções. No trabalho administrativo, ela pode ajudar a preparar rascunhos e organizar informações para revisão.</p>
+          <p>A IA generativa usa padrões aprendidos durante o treinamento para criar conteúdo a partir de instruções. No trabalho administrativo, ela pode sugerir textos, fórmulas e rascunhos para você revisar.</p>
         </header>
         <ul class="task-grid">
           <li><span class="tile-icon" aria-hidden="true">✉</span><h3>E-mails</h3><p>Redija um convite para uma reunião e revise o tom antes de enviar.</p></li>
@@ -79,7 +90,7 @@
             <p class="muted">Todos os casos abaixo são fictícios.</p>
             <div class="examples">
               <details open><summary>Financeiro · E-mail de lembrete</summary><div class="comparison">
-                <p><strong>Prompt vago</strong>Escreva um e-mail de cobrança.</p>
+                <p><strong>Prompt vago</strong>Escreva um e-mail pedindo uma nota fiscal.</p>
                 <p><strong>Prompt aprimorado</strong>Redija um lembrete cordial para um fornecedor fictício enviar uma nota fiscal até sexta-feira. Inclua assunto e até dois parágrafos. Não invente valores ou números de pedido.</p>
               </div></details>
               <details><summary>Recursos Humanos · Planilha de treinamento</summary><div class="comparison">
@@ -162,6 +173,7 @@ Se faltarem dados, indique o que precisa ser confirmado.</pre>
             <button type="submit" id="corrigir" class="button button-primary">Ver resultado</button>
             <button type="reset" id="refazer" class="button button-outline" hidden>Refazer teste</button>
           </div>
+          <p id="quiz-aviso" class="quiz-notice" role="status"></p>
           <section id="quiz-result" class="result" tabindex="-1" aria-labelledby="quiz-score" hidden>
             <h3 id="quiz-score"></h3>
             <ol id="quiz-review"></ol>
@@ -170,11 +182,27 @@ Se faltarem dados, indique o que precisa ser confirmado.</pre>
       </div>
     </section>
 
+    <section class="section resources" id="avaliacao" aria-labelledby="titulo-avaliacao">
+      <div class="wrap resource-grid">
+        <div class="resource-card">
+          <h2 id="titulo-avaliacao">Avalie este material educativo</h2>
+          <p>Sua avaliação é voluntária e ajuda a melhorar o portal. O formulário dispensará nome, e-mail e identificação profissional.</p>
+          <p id="avaliacao-pendente" class="resource-note">A avaliação será disponibilizada posteriormente.</p>
+          <a class="button button-outline" id="link-avaliacao" referrerpolicy="no-referrer" hidden>Avaliar o material</a>
+        </div>
+        <section class="resource-card" id="material-complementar" aria-labelledby="titulo-material" hidden>
+          <h2 id="titulo-material">Material complementar</h2>
+          <p>Acesse uma apresentação resumida com exemplos práticos e orientações para utilizar a Inteligência Artificial com maior segurança e eficiência.</p>
+          <a class="button button-outline" id="link-apresentacao" hidden>Acessar apresentação</a>
+        </section>
+      </div>
+    </section>
+
     <section class="section about" id="sobre" aria-labelledby="titulo-sobre">
       <div class="wrap split">
         <div>
           <header class="section-heading"><p class="eyebrow">Extensão e cidadania</p><h2 id="titulo-sobre">Sobre o projeto</h2></header>
-          <p>Ação de extensão universitária da Unyleya, desenvolvida no curso de Redes de Computadores para a disciplina Ambiente Profissional e de Extensão V (APEX V). Integra o programa Educando para a Cidadania e se alinha ao ODS 4 – Educação de Qualidade.</p>
+          <p>Este portal educativo é uma ação de extensão universitária da Unyleya, desenvolvida no curso de Redes de Computadores para a disciplina Ambiente Profissional e de Extensão V (APEX V). Integra o programa Educando para a Cidadania e se alinha ao ODS 4 – Educação de Qualidade.</p>
           <p>O material é destinado a profissionais administrativos do Estaleiro Mauá, em Niterói (RJ), com foco em Financeiro, Recursos Humanos, Meio Ambiente e Planejamento.</p>
           <p>Em um levantamento inicial com quatro colaboradoras, todas relataram usar IA e já ter recebido respostas diferentes do esperado. As dificuldades para escrever prompts e a necessidade de corrigir ou refazer tarefas orientaram a escolha dos exemplos e exercícios.</p>
         </div>
@@ -188,6 +216,14 @@ Se faltarem dados, indique o que precisa ser confirmado.</pre>
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="wrap footer-inner"><p>IA no Trabalho · Material acadêmico independente · APEX V</p><a href="#inicio">Voltar ao início</a></div></footer>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p><strong>IA no Trabalho · Redes de Computadores · Unyleya · APEX V</strong></p>
+        <p class="footer-note">Material educativo desenvolvido como atividade acadêmica de extensão universitária. Não constitui comunicação institucional oficial do Estaleiro Mauá ou da Unyleya.</p>
+      </div>
+      <a href="#inicio">Voltar ao início</a>
+    </div>
+  </footer>
 </body>
 </html>
